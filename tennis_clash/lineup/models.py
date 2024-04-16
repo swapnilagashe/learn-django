@@ -15,7 +15,7 @@ class Character(models.Model):
 class Racket(models.Model):
     name = models.CharField(max_length=20)
     level =models.IntegerField(default=0)
-
+    
 class Grip(models.Model):
     name = models.CharField(max_length=20)
     level =models.IntegerField(default=0)
@@ -35,3 +35,5 @@ class Nutrition(models.Model):
 class Workout(models.Model):
     name = models.CharField(max_length=20)
     level =models.IntegerField(default=0)
+    
+    
