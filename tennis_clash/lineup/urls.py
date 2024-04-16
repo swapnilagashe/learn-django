@@ -4,6 +4,6 @@ from django.urls import include
 from lineup import views
 
 urlpatterns = [
-    path('home',views.index)
+    path('',views.index)
 
 ]
