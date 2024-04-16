@@ -1,8 +1,10 @@
 from django.shortcuts import render
-from django.requests import HttpRequest
+from django.http import HttpRequest,HttpResponse
 from .models import Character
 
 # Create your views here.
+def index():
+    return HttpResponse('Welcome to Tennish clash lineup optimiser')
 def calculate_player_attributes(HttpRequest):
     character_level = HttpRequest.get('character_level')
     character_name = HttpRequest.get('character_name')
