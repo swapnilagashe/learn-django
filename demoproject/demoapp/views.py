@@ -1,5 +1,25 @@
 from django.http import HttpResponse
 from django.views import View
+from demoapp.forms import DemoForm,DemoModelForm
+from django.shortcuts import render
+
+
+def form_view(request):
+    form =DemoModelForm()
+    if request.method == "POST":
+        form=DemoModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+        
+    context ={"form":form}
+    return render(request,"home.html",context)
+
+def form_view_2(request):
+    form =DemoForm()
+    context ={"form":form}
+    return render(request,"home_2.html",context)
+
+
 # Create your views here.
 def index(request):
     path  = request.path

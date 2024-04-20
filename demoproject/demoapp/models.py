@@ -9,7 +9,7 @@ class Menu(models.Model):
     cuisine = models.CharField(max_length=100)
     price = models.IntegerField()
     rating = models.IntegerField()
-    category_id = models.ForeignKey(MenuCategory, on_delete=models.PROTECT,default = None,related_name = "category_name")
+    #category_id = models.ForeignKey(MenuCategory, on_delete=models.PROTECT,default = None,related_name = "category_name")
     
     def __str__(self):
         return self.name+" : " + self.cuisine
